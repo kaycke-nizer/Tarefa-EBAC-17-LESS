@@ -1,3 +1,133 @@
+@import "colors.less";
+@import "screensizes.less";
+
+@mainFont: Arial, sans-serif;
+
+@tamanhotela: ~"(max-width: 846px)";
+
+* {
+    margin: 0;
+}
+
 body {
-    background-color: red;
+    display: block;
+    margin: 0;
+    background-color: #colorsMap[colorone];
+    font-family: @mainFont;
+    .displaycenter();
+
+    h1 {
+        color: #colorsMap[colortwo];
+        font-size: 46pt;
+        padding: 26px;
+    }
+}
+
+img {
+    height: 70vh;
+    display: inline-block;
+    margin: 10px;
+    margin-top: 0;
+}
+.displaycenter() {
+    align-items: center;
+    text-align: center;
+}
+
+.container-main {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 720px;
+}
+
+.container-calc {
+    display: inline-block;
+    height: 500px;
+    width: 300px;
+    background-color: rgb(190, 190, 190);
+    margin: 10%;
+    padding: 20px;
+    border-radius: 12px;
+
+
+    span {
+        display: block;
+        padding: 5px;
+    }
+
+    .enter {
+        display: flex;
+        font-size: 18pt;
+        height: 86px;
+        justify-content: space-between;
+        align-items: center;
+        background-color: lightgrey;
+        border: none;
+        border-radius: 12px;
+        margin: 10px;
+        padding: 0 26px;
+        overflow: hidden;
+         
+        input {
+            border: none;
+            background-color: lightgrey;
+            justify-content: center;
+            text-align: center;
+            font-size: 18pt;
+            width: 120px;
+        
+        }
+
+        input:focus{
+            outline: none;
+        }
+    }
+
+    input {
+        padding: 10px;
+        margin: 10px;
+
+    }
+
+    .button-calc {
+        padding: 20px 50px;
+        border: none;
+        border-radius: 15px;
+        color: white;
+        background-color: rgb(77, 127, 3);
+        cursor: pointer;
+        overflow: hidden;
+    }
+
+}
+
+.social-media-images{
+    display: flex;
+    position: absolute;
+    
+    span {
+        margin: 0;
+        cursor: pointer;
+        img {
+            margin: 40px 10px;
+            height: 40px;
+        }
+    }
+}
+
+.button-calc:hover {
+    background-color: rgb(109, 144, 64);
+}
+
+.social-media-images span img:hover {
+    height: 44px;
+    margin-right: 6px;
+}
+
+@media @tamanhotela {
+    #main-image {
+        display: none;
+    }
 }
